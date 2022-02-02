@@ -310,7 +310,6 @@ class MultiResUNet(BaseUNet):
 
         return predictions
 
-
 class MultiResUNetRecurrent(BaseUNet):
     """
     Recurrent UNet architecture where every encoder is followed by a recurrent convolutional block.

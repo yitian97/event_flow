@@ -5,7 +5,7 @@ Adapted from Monash University https://github.com/TimoStoff/events_contrast_maxi
 import numpy as np
 import torch
 
-
+##binary_search_array(file["events/ts"], timestamp)
 def binary_search_array(array, x, left=None, right=None, side="left"):
     """
     Binary search through a sorted array.
@@ -101,3 +101,8 @@ def get_hot_event_mask(event_rate, idx, max_px=100, min_obvs=5, max_rate=0.8):
             else:
                 break
     return mask
+if __name__ == "__main__":
+    event_arr = np.array[[123,234,345,434,434,444]]
+    timestamp = 422
+
+    print(binary_search_array(event_arr,timestamp))

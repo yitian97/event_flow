@@ -82,6 +82,7 @@ class YAMLParser:
 
     def get_device(self):
         cuda = torch.cuda.is_available()
+        #cuda = False
         self._device = torch.device("cuda:" + str(self._config["loader"]["gpu"]) if cuda else "cpu")
         self._loader_kwargs = {"num_workers": 0, "pin_memory": True} if cuda else {}
 
@@ -91,9 +92,9 @@ class YAMLParser:
 
     def init_seeds(self):
         torch.manual_seed(self._config["loader"]["seed"])
-        if torch.cuda.is_available():
-            torch.cuda.manual_seed(self._config["loader"]["seed"])
-            torch.cuda.manual_seed_all(self._config["loader"]["seed"])
+        #if torch.cuda.is_available():
+        #    torch.cuda.manual_seed(self._config["loader"]["seed"])
+        #    torch.cuda.manual_seed_all(self._config["loader"]["seed"])
 
     def merge_configs(self, run):
         """

@@ -82,7 +82,6 @@ class ConvLayer_(ConvLayer):
 
         return out, prev_state
 
-
 class TransposedConvLayer(nn.Module):
     """
     Transposed convolutional layer to increase spatial resolution (x2) in a decoder.
@@ -136,7 +135,6 @@ class TransposedConvLayer(nn.Module):
 
         return out
 
-
 class UpsampleConvLayer(nn.Module):
     """
     Upsampling layer (bilinear interpolation + Conv2d) to increase spatial resolution (x2) in a decoder.
@@ -183,7 +181,6 @@ class UpsampleConvLayer(nn.Module):
             out = self.activation(out)
 
         return out
-
 
 class RecurrentConvLayer(nn.Module):
     """

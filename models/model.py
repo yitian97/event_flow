@@ -29,7 +29,7 @@ from .unet import (
 class E2VID(BaseModel):
     """
     E2VID architecture (adapted for optical flow estimation), as described in the paper "High Speed and High
-    Dynamic Range Video with an Event Camera", Rebecq et al., TPAMI 2021.
+    Dynamic Range Video with an Event Camera", Rebecq et al., TPAMI 2020.
     """
 
     def __init__(self, unet_kwargs):
@@ -408,7 +408,7 @@ class FireFlowNet(FireNet):
     residual = False
     w_scale_pred = 0.01
 
-
+#use convgru
 class RecEVFlowNet(BaseModel):
     """
     Recurrent version of the EV-FlowNet architecture from the paper "EV-FlowNet: Self-Supervised Optical
@@ -590,7 +590,7 @@ class XLIFRecEVFlowNet(RecEVFlowNet):
     recurrent_block_type = "xlif"
     spiking_feedforward_block_type = "xlif"
 
-
+#use convrnn
 class RNNRecEVFlowNet(RecEVFlowNet):
     """
     Recurrent version of the EV-FlowNet architecture from the paper "EV-FlowNet: Self-Supervised Optical
