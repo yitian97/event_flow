@@ -1,7 +1,7 @@
 experiment: Default
 
 data:
-    path: /home/ytian/datasets/MVSEC/h5
+    path: /home/ytian/datasets/event_flow/training
     mode: events # events
     window: 1000 # events
     window_loss: 10000 # events
