@@ -7,7 +7,7 @@ data:
     window_loss: 10000 # events
 
 model:
-    name: LIFFireNet # for other models available, see models/model.py
+    name: XLIFRecEVFlowNet # for other models available, see models/model.py
     encoding: cnt # voxel/cnt
     round_encoding: False # for voxel encoding
     norm_input: False # normalize input
